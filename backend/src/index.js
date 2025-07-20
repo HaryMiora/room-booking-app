@@ -17,7 +17,14 @@ app.get('/', (req, res) => {
 
 // Routes principales (à venir)
 import authRoutes from './routes/auth.routes.js'
+import salleRoutes from './routes/salle.routes.js'
+import reservationRoutes from './routes/reservation.routes.js'
+import passwordRoutes from './routes/password.route.js'
+
 app.use('/api/auth', authRoutes)
+app.use('/api/salles', salleRoutes)
+app.use('/api/reservations', reservationRoutes)
+app.use('/api/auth', passwordRoutes)
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT, () => {
